@@ -3,395 +3,515 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>M4sterNoob — Game Developer · Ontario, Canada</title>
-  <meta name="description" content="Game developer building toward AAA. Shipped iOS game (SceneKit/Swift). Building multiplayer party game in Unreal Engine 5.6 C++. Ontario, Canada.">
-  <meta name="theme-color" content="#0d0d12">
+  <meta name="description" content="M4sterNoob — Game Developer. Shipped iOS game (SceneKit/Swift). Building multiplayer party game in Unreal Engine 5.6 C++. Kitchener-Waterloo, Ontario.">
+  <meta name="theme-color" content="#0a0a0f">
+  <title>M4sterNoob — Game Developer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="style.css">
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎮</text></svg>">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%230a0a0f'/><path d='M8 16c0-4.4 3.6-8 8-8s8 3.6 8 8-3.6 8-8 8' fill='none' stroke='%2300d4ff' stroke-width='2'/><circle cx='16' cy='16' r='3' fill='%2300d4ff'/></svg>">
 </head>
 <body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+
   <!-- ===== Navigation ===== -->
-  <nav class="topnav" role="navigation" aria-label="Main navigation">
-    <div class="nav-brand" aria-label="Home">MN</div>
-    <div class="nav-links">
-      <a href="#projects">Projects</a>
-      <a href="#skills">Skills</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
-      <a href="resume.md" download class="btn-nav">↓ Resume</a>
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav-container">
+      <a href="/" class="nav-brand" aria-label="Home">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span class="brand-text">M4sterNoob</span>
+      </a>
+      <div class="nav-links">
+        <a href="#work" class="nav-link">Work</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#contact" class="nav-link">Contact</a>
+        <a href="resume.md" download class="nav-link nav-cta">Résumé</a>
+      </div>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle menu">
+        <span class="hamburger" aria-hidden="true"></span>
+      </button>
+    </div>
+    <div class="nav-menu" id="nav-menu" role="menu">
+      <a href="#work" class="nav-link" role="menuitem">Work</a>
+      <a href="#about" class="nav-link" role="menuitem">About</a>
+      <a href="#contact" class="nav-link" role="menuitem">Contact</a>
+      <a href="resume.md" download class="nav-link nav-cta" role="menuitem">Résumé</a>
     </div>
   </nav>
 
   <!-- ===== Hero ===== -->
   <header class="hero" role="banner">
-    <div class="hero-grid" aria-hidden="true"></div>
-    <div class="hero-bg-shape" aria-hidden="true"></div>
-    <div class="hero-content" role="main">
-      <p class="hero-eyebrow">Game Developer · Kitchener-Waterloo, Ontario</p>
-      <h1>M4sterNoob</h1>
-      <p class="tagline">
-        iOS shipped today.<br>
-        Unreal Engine 5.6 C++ in progress.<br>
-        Comfortable owning a feature from prototype to ship.
-      </p>
-      <div class="hero-cta">
-        <a href="#projects" class="btn btn-primary">See Projects</a>
-        <a href="#contact" class="btn">Get in Touch</a>
+    <div class="hero-bg" aria-hidden="true">
+      <canvas class="hero-canvas"></canvas>
+      <div class="hero-gradient"></div>
+    </div>
+    <div class="hero-content">
+      <p class="hero-tag">Game Developer — Kitchener-Waterloo, ON</p>
+      <h1 class="hero-title">Building games that feel <span class="accent-text">right</span>.</h1>
+      <p class="hero-sub">Shipped a 3D physics party game on iOS. Now building a multiplayer party game in Unreal Engine 5.6 — pure C++, daily commits, 30-day public roadmap.</p>
+      <div class="hero-actions">
+        <a href="#work" class="btn btn-primary">View Work</a>
+        <a href="#contact" class="btn btn-ghost">Get In Touch</a>
       </div>
       <div class="hero-stats" aria-label="Quick stats">
-        <div class="stat"><span class="stat-value">1</span><span class="stat-label">Shipped Game</span></div>
-        <div class="stat"><span class="stat-value">2</span><span class="stat-label">Engines</span></div>
-        <div class="stat"><span class="stat-value">30</span><span class="stat-label">Day Roadmap</span></div>
-        <div class="stat"><span class="stat-value">4</span><span class="stat-label">Target Studios</span></div>
+        <div class="stat">
+          <span class="stat-value" data-count="1">0</span>
+          <span class="stat-label">Shipped Game</span>
+        </div>
+        <div class="stat">
+          <span class="stat-value" data-count="2">0</span>
+          <span class="stat-label">Engines</span>
+        </div>
+        <div class="stat">
+          <span class="stat-value" data-count="30">0</span>
+          <span class="stat-label">Day Roadmap</span>
+        </div>
+        <div class="stat">
+          <span class="stat-value" data-count="4">0</span>
+          <span class="stat-label">Target Studios</span>
+        </div>
       </div>
     </div>
-    <div class="scroll-indicator" aria-hidden="true">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M19 12l-7 7-7-7"/></svg>
+    <div class="hero-scroll" aria-hidden="true">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 5v14M19 12l-7 7-7-7"/></svg>
     </div>
   </header>
 
-  <!-- ===== Projects ===== -->
-  <section id="projects" aria-labelledby="projects-heading">
-    <h2 id="projects-heading">Projects</h2>
-    <p class="section-intro">One shipped, one shipping, one solving a real problem. Quality > quantity.</p>
+  <main id="main">
+    <!-- ===== Work ===== -->
+    <section id="work" class="section" aria-labelledby="work-heading">
+      <div class="container">
+        <header class="section-header">
+          <h2 id="work-heading" class="section-title">Selected Work</h2>
+          <p class="section-sub">Three projects. One shipped, one in progress, one tooling. Each taught me something different.</p>
+        </header>
 
-    <div class="project-grid">
-      <!-- Stumble Lite - SHIPPED -->
-      <article class="project-card featured">
-        <div class="project-image" style="background: linear-gradient(135deg, #1a1a2a 0%, #0f0f1a 100%);">
-          <span class="project-status status-shipped">✓ SHIPPED</span>
-          <span class="project-emoji">🎮</span>
-          <div class="project-preview" aria-hidden="true">
-            <svg viewBox="0 0 200 112" class="preview-svg">
-              <circle cx="100" cy="56" r="28" fill="none" stroke="#00d4ff" stroke-width="2" opacity="0.6"/>
-              <circle cx="70" cy="56" r="12" fill="#ff4444" opacity="0.8"/>
-              <circle cx="130" cy="56" r="12" fill="#44ff44" opacity="0.8"/>
-              <circle cx="100" cy="30" r="12" fill="#4488ff" opacity="0.8"/>
-              <circle cx="100" cy="82" r="12" fill="#ffdd44" opacity="0.8"/>
-              <rect x="50" y="50" width="100" height="4" fill="#00d4ff" opacity="0.3"/>
-            </svg>
-          </div>
-        </div>
-        <div class="project-body">
-          <h3>Stumble Lite</h3>
-          <p class="project-meta">iOS · Solo · SceneKit + Swift · 2026</p>
-          <p>3D physics-based party game. 4 capsule characters knock each other off a platform during a 60-second round. Programmatic low-poly graphics, custom physics, virtual joystick input, end-to-end Xcode build pipeline.</p>
-          <div class="project-tags">
-            <span>Swift</span>
-            <span>SceneKit</span>
-            <span>Physics</span>
-            <span>UIKit</span>
-            <span>MultipeerConnectivity</span>
-          </div>
-          <div class="project-links">
-            <a href="https://github.com/m4sternoob/stumble-lite" target="_blank" rel="noopener">View Code →</a>
-            <span class="link-separator" aria-hidden="true">|</span>
-            <a href="#stumble-lite-details" class="details-trigger">Details</a>
-          </div>
-        </div>
-      </article>
+        <div class="projects-grid">
+          <!-- Stumble Lite -->
+          <article class="project-card featured" data-project="stumble-lite">
+            <div class="project-media">
+              <img src="screenshot-hero.png" alt="Stumble Lite gameplay — four capsule characters on a platform with spinning obstacles" loading="eager" width="640" height="360">
+              <span class="project-badge shipped">Shipped</span>
+            </div>
+            <div class="project-body">
+              <div class="project-meta">
+                <span class="project-platform">iOS</span>
+                <span class="project-divider" aria-hidden="true"></span>
+                <span class="project-stack">SceneKit · Swift · UIKit</span>
+                <span class="project-divider" aria-hidden="true"></span>
+                <span class="project-year">2026</span>
+              </div>
+              <h3 class="project-title">Stumble Lite</h3>
+              <p class="project-desc">A 3D physics-based party game where four capsule characters knock each other off a shrinking platform. 60-second rounds, procedural obstacles, virtual joystick controls, programmatic low-poly art — zero external assets.</p>
+              <ul class="project-highlights">
+                <li>Custom physics: capsule bodies, bitmask collision filtering, kill-zone elimination</li>
+                <li>Kinematic obstacles: spinning bars, moving platforms with sinusoidal motion</li>
+                <li>Build pipeline: Python script generates Xcode project, CI-ready</li>
+                <li>Runs on iPhone X / iOS 16+ and current simulators</li>
+              </ul>
+              <div class="project-links">
+                <a href="https://github.com/m4sternoob/stumble-lite" target="_blank" rel="noopener" class="link link-code">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                  Code
+                </a>
+                <button class="link link-details" data-modal="stumble-lite">Details</button>
+              </div>
+            </div>
+          </article>
 
-      <!-- StumbleGuysClone - IN PROGRESS -->
-      <article class="project-card">
-        <div class="project-image" style="background: linear-gradient(135deg, #1a2a1a 0%, #0f1a0f 100%);">
-          <span class="project-status status-progress">⏳ IN PROGRESS</span>
-          <span class="project-emoji">🕹️</span>
-          <div class="project-preview" aria-hidden="true">
-            <svg viewBox="0 0 200 112" class="preview-svg">
-              <rect x="40" y="40" width="120" height="32" rx="4" fill="#b968ff" opacity="0.3"/>
-              <polygon points="100,20 140,50 60,50" fill="#00d4ff" opacity="0.6"/>
-              <circle cx="80" cy="80" r="8" fill="#ff4444" opacity="0.8"/>
-              <circle cx="120" cy="80" r="8" fill="#44ff44" opacity="0.8"/>
-              <path d="M50 60 Q75 30 100 45 T150 60" fill="none" stroke="#b968ff" stroke-width="3" opacity="0.5"/>
-            </svg>
-          </div>
-        </div>
-        <div class="project-body">
-          <h3>StumbleGuysClone</h3>
-          <p class="project-meta">Unreal Engine 5.6 · C++ · Solo · 2026</p>
-          <p>Multiplayer party game in UE 5.6. Solo build, 30-day public roadmap with daily commits and devlog. C++ throughout (no Blueprints for gameplay). Targeting vertical slice by Day 14, full ship by Day 30.</p>
-          <div class="project-tags">
-            <span>C++</span>
-            <span>UE 5.6</span>
-            <span>Multiplayer</span>
-            <span>Chaos Physics</span>
-            <span>Replication</span>
-          </div>
-          <div class="project-links">
-            <a href="https://github.com/m4sternoob/StumbleGuysClone" target="_blank" rel="noopener">View Code →</a>
-            <span class="link-separator" aria-hidden="true">|</span>
-            <a href="#stumbleguysclone-details" class="details-trigger">Details</a>
-          </div>
-        </div>
-      </article>
+          <!-- StumbleGuysClone -->
+          <article class="project-card" data-project="stumbleguysclone">
+            <div class="project-media">
+              <div class="project-placeholder" style="background: linear-gradient(135deg, #0d1b12 0%, #0a0f0a 100%);">
+                <svg viewBox="0 0 320 180" class="placeholder-svg" aria-hidden="true">
+                  <rect x="40" y="50" width="240" height="80" rx="8" fill="#00d4ff" opacity="0.1" stroke="#00d4ff" stroke-width="1" stroke-dasharray="8,4"/>
+                  <polygon points="160,30 200,70 120,70" fill="#b968ff" opacity="0.4"/>
+                  <circle cx="130" cy="110" r="12" fill="#ff4444" opacity="0.6"/>
+                  <circle cx="190" cy="110" r="12" fill="#44ff44" opacity="0.6"/>
+                  <text x="160" y="155" text-anchor="middle" font-family="monospace" font-size="11" fill="#888">UE 5.6 · C++ · In Progress</text>
+                </svg>
+              </div>
+              <span class="project-badge progress">In Progress</span>
+            </div>
+            <div class="project-body">
+              <div class="project-meta">
+                <span class="project-platform">PC / Mac</span>
+                <span class="project-divider" aria-hidden="true"></span>
+                <span class="project-stack">Unreal Engine 5.6 · C++ · Chaos Physics</span>
+                <span class="project-divider" aria-hidden="true"></span>
+                <span class="project-year">2026</span>
+              </div>
+              <h3 class="project-title">StumbleGuysClone</h3>
+              <p class="project-desc">Multiplayer party game built from scratch in UE 5.6. No Blueprints for gameplay — pure C++ to demonstrate engine mastery. 30-day public roadmap with daily commits, devlogs, and a vertical slice target by Day 14.</p>
+              <ul class="project-highlights">
+                <li>Character: capsule + sphere, EnhancedInput, camera-relative movement</li>
+                <li>Planned: replication, server-authoritative physics, LAN session browser</li>
+                <li>Obstacles: spinning bars, moving platforms, kill zones</li>
+                <li>Target: vertical slice Day 14, full ship Day 30</li>
+              </ul>
+              <div class="project-links">
+                <a href="https://github.com/m4sternoob/StumbleGuysClone" target="_blank" rel="noopener" class="link link-code">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                  Code
+                </a>
+                <button class="link link-details" data-modal="stumbleguysclone">Details</button>
+              </div>
+            </div>
+          </article>
 
-      <!-- Phone Mirror Tool - SHIPPED -->
-      <article class="project-card">
-        <div class="project-image" style="background: linear-gradient(135deg, #2a1a2a 0%, #1a0f1a 100%);">
-          <span class="project-status status-shipped">✓ SHIPPED</span>
-          <span class="project-emoji">📱</span>
-          <div class="project-preview" aria-hidden="true">
-            <svg viewBox="0 0 200 112" class="preview-svg">
-              <rect x="30" y="20" width="60" height="90" rx="8" fill="#1a1a2a" stroke="#00d4ff" stroke-width="2"/>
-              <rect x="110" y="20" width="60" height="90" rx="8" fill="#1a1a2a" stroke="#b968ff" stroke-width="2"/>
-              <path d="M90 65 Q100 40 110 65" fill="none" stroke="#00d4ff" stroke-width="3" stroke-dasharray="8,4"/>
-              <circle cx="60" cy="65" r="18" fill="#00d4ff" opacity="0.2"/>
-              <circle cx="140" cy="65" r="18" fill="#b968ff" opacity="0.2"/>
-            </svg>
-          </div>
+          <!-- Phone Mirror -->
+          <article class="project-card" data-project="phone-mirror">
+            <div class="project-media">
+              <div class="project-placeholder" style="background: linear-gradient(135deg, #1a0d1a 0%, #0f0a0f 100%);">
+                <svg viewBox="0 0 320 180" class="placeholder-svg" aria-hidden="true">
+                  <rect x="60" y="30" width="80" height="120" rx="12" fill="#00d4ff" opacity="0.1" stroke="#00d4ff" stroke-width="2"/>
+                  <rect x="180" y="30" width="80" height="120" rx="12" fill="#b968ff" opacity="0.1" stroke="#b968ff" stroke-width="2"/>
+                  <path d="M140 90 Q160 50 180 90" fill="none" stroke="#00d4ff" stroke-width="2" stroke-dasharray="6,4"/>
+                  <circle cx="100" cy="90" r="24" fill="#00d4ff" opacity="0.15"/>
+                  <circle cx="220" cy="90" r="24" fill="#b968ff" opacity="0.15"/>
+                  <text x="160" y="155" text-anchor="middle" font-family="monospace" font-size="11" fill="#888">scrcpy + adb + Automation</text>
+                </svg>
+              </div>
+              <span class="project-badge shipped">Shipped</span>
+            </div>
+            <div class="project-body">
+              <div class="project-meta">
+                <span class="project-platform">Tooling</span>
+                <span class="project-divider" aria-hidden="true"></span>
+                <span class="project-stack">scrcpy · adb · AppleScript · OpenClaw</span>
+                <span class="project-divider" aria-hidden="true"></span>
+                <span class="project-year">2026</span>
+              </div>
+              <h3 class="project-title">Phone Mirror + Agent Pipeline</h3>
+              <p class="project-desc">Wireless Android debugging pipeline that auto-reconnects when the debug port changes. Eliminates manual <code>adb connect IP:PORT</code> from every phone-screen session.</p>
+              <ul class="project-highlights">
+                <li>Local agent monitors <code>adb devices</code> for port changes</li>
+                <li>Auto-reconnects + triggers scrcpy relaunch via AppleScript</li>
+                <li>Zero manual steps — phone mirrors instantly</li>
+              </ul>
+              <div class="project-links">
+                <button class="link link-details" data-modal="phone-mirror">Details</button>
+              </div>
+            </div>
+          </article>
         </div>
-        <div class="project-body">
-          <h3>Phone Mirror + Agent Pipeline</h3>
-          <p class="project-meta">Tooling · Solo · scrcpy + adb + OpenClaw · 2026</p>
-          <p>Wireless Android debugging pipeline that auto-reconnects when the debug port changes. Eliminates a friction step from every phone-screen session. Built with scrcpy, adb, and local AI agent automation.</p>
-          <div class="project-tags">
-            <span>scrcpy</span>
-            <span>adb</span>
-            <span>Shell</span>
-            <span>AppleScript</span>
-            <span>Automation</span>
-          </div>
-          <div class="project-links">
-            <a href="#phone-mirror-details" class="details-trigger">Details</a>
-          </div>
+      </div>
+    </section>
+
+    <!-- ===== Technical Depth ===== -->
+    <section id="tech" class="section section-alt" aria-labelledby="tech-heading">
+      <div class="container">
+        <header class="section-header">
+          <h2 id="tech-heading" class="section-title">Technical Depth</h2>
+          <p class="section-sub">How I approach problems — systems, architecture, and the details that matter.</p>
+        </header>
+
+        <div class="tech-grid">
+          <article class="tech-card">
+            <div class="tech-icon" aria-hidden="true">
+              <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="16" cy="16" r="12"/><path d="M16 8v8l6 4"/></svg>
+            </div>
+            <h3>Physics Systems</h3>
+            <p>Built custom physics from scratch twice — SceneKit bitmask collision filtering for iOS, now Chaos Physics in UE 5.6 with server-authoritative replication. Understand the math: integration, collision response, networked determinism.</p>
+            <span class="tech-tag">C++</span>
+            <span class="tech-tag">Swift</span>
+            <span class="tech-tag">Chaos</span>
+          </article>
+
+          <article class="tech-card">
+            <div class="tech-icon" aria-hidden="true">
+              <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="4" width="24" height="24" rx="4"/><path d="M12 16h8M16 12v8"/></svg>
+            </div>
+            <h3>Build & Pipeline</h3>
+            <p>Python script generates Xcode projects from source tree (with pbxproj post-fix). UE 5.6 Build.cs module setup, EnhancedInput configuration, CI-ready. Automate the boring stuff so iteration stays fast.</p>
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">UnrealBuildTool</span>
+            <span class="tech-tag">CI/CD</span>
+          </article>
+
+          <article class="tech-card">
+            <div class="tech-icon" aria-hidden="true">
+              <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 16c0-6.6 5.4-12 12-12s12 5.4 12 12"/><path d="M16 4v6M16 22v6M4 16h6M22 16h6"/></svg>
+            </div>
+            <h3>Multiplayer Architecture</h3>
+            <p>Designing for replication from day one: server-authoritative movement, client-side prediction skeleton, bandwidth-aware state updates. LAN first, online later — the fundamentals transfer.</p>
+            <span class="tech-tag">UE Replication</span>
+            <span class="tech-tag">Networking</span>
+            <span class="tech-tag">C++</span>
+          </article>
+
+          <article class="tech-card">
+            <div class="tech-icon" aria-hidden="true">
+              <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 16l4 4 8-8"/><path d="M16 4v24M4 16h24"/></svg>
+            </div>
+            <h3>Daily Discipline</h3>
+            <p>30-day roadmap, daily commits, weekly devlogs, public accountability. Shipping is a habit. The code in the repo is the truth — not the plan, not the talk.</p>
+            <span class="tech-tag">Git</span>
+            <span class="tech-tag">Process</span>
+            <span class="tech-tag">Shipping</span>
+          </article>
         </div>
-      </article>
+      </div>
+    </section>
+
+    <!-- ===== About ===== -->
+    <section id="about" class="section" aria-labelledby="about-heading">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-text">
+            <h2 id="about-heading" class="section-title">About</h2>
+            <p>I'm a game developer based in Kitchener-Waterloo, Ontario. I've shipped a solo iOS game built with SceneKit and Swift, and I'm currently building a multiplayer party game in Unreal Engine 5.6 using pure C++.</p>
+            <p>My path wasn't straight — started with mobile, fell in love with physics systems and the craft of "juice" in games. A classmate once told me "you only know how to copy AI." That lit a fire. Now every commit is proof: I build, I break, I fix, I ship.</p>
+            <p>Looking for a junior gameplay or engine programmer role at an Ontario studio where I can own features, learn from seniors, and contribute to games people actually play.</p>
+          </div>
+          <aside class="about-sidebar">
+            <div class="about-card">
+              <h3>Currently</h3>
+              <ul class="about-list">
+                <li>Shipping UE 5.6 StumbleGuysClone</li>
+                <li>Daily commits, public roadmap</li>
+                <li>Week 1 → Day 3 (Arena)</li>
+              </ul>
+            </div>
+            <div class="about-card">
+              <h3>Seeking</h3>
+              <ul class="about-list">
+                <li>Junior Gameplay Programmer</li>
+                <li>Engine Programmer (entry)</li>
+                <li>Tools Programmer</li>
+              </ul>
+            </div>
+            <div class="about-card">
+              <h3>Target Studios</h3>
+              <ul class="about-list">
+                <li>Ubisoft Toronto</li>
+                <li>Rockstar Toronto</li>
+                <li>Certain Affinity</li>
+                <li>DrinkBox Studios</li>
+                <li>Torn Banner Studios</li>
+                <li>Capybara Games</li>
+                <li>Digital Extremes</li>
+              </ul>
+            </div>
+            <div class="about-card">
+              <h3>Open To</h3>
+              <ul class="about-list">
+                <li>Co-op</li>
+                <li>Internship</li>
+                <li>Junior Full-time</li>
+              </ul>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Contact ===== -->
+    <section id="contact" class="section section-alt" aria-labelledby="contact-heading">
+      <div class="container">
+        <header class="section-header">
+          <h2 id="contact-heading" class="section-title">Contact</h2>
+          <p class="section-sub">Fastest way to reach me. Mention you saw the portfolio.</p>
+        </header>
+        <div class="contact-grid">
+          <a href="mailto:m4sternoob@gmail.com" class="contact-card">
+            <div class="contact-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <span class="contact-label">Email</span>
+            <span class="contact-value">m4sternoob@gmail.com</span>
+          </a>
+          <a href="https://linkedin.com/in/m4sternoob" target="_blank" rel="noopener" class="contact-card">
+            <div class="contact-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            </div>
+            <span class="contact-label">LinkedIn</span>
+            <span class="contact-value">/in/m4sternoob</span>
+          </a>
+          <a href="https://github.com/m4sternoob" target="_blank" rel="noopener" class="contact-card">
+            <div class="contact-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+            </div>
+            <span class="contact-label">GitHub</span>
+            <span class="contact-value">@m4sternoob</span>
+          </a>
+          <a href="resume.md" download class="contact-card">
+            <div class="contact-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+            </div>
+            <span class="contact-label">Résumé</span>
+            <span class="contact-value">Download (Markdown)</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <p class="footer-copy">Built with vanilla HTML/CSS/JS — no framework bloat.</p>
+      <p class="footer-credit">© 2026 M4sterNoob. Free to study, fork, and learn from.</p>
     </div>
-  </section>
+  </footer>
 
-  <!-- ===== Skills ===== -->
-  <section id="skills" aria-labelledby="skills-heading">
-    <h2 id="skills-heading">Skills</h2>
-    <p class="section-intro">Languages, engines, and what I actually do with them.</p>
-
-    <div class="skills-grid">
-      <div class="skill-category">
-        <h3>Languages</h3>
-        <ul>
-          <li>C++ <span class="skill-level">production</span></li>
-          <li>Swift <span class="skill-level">shipped</span></li>
-          <li>JavaScript</li>
-          <li>Python</li>
-          <li>GDScript <span class="skill-level">basic</span></li>
-        </ul>
-      </div>
-
-      <div class="skill-category">
-        <h3>Engines</h3>
-        <ul>
-          <li>Unreal Engine 5.6</li>
-          <li>SceneKit</li>
-          <li>SpriteKit</li>
-          <li>Godot <span class="skill-level">basic</span></li>
-        </ul>
-      </div>
-
-      <div class="skill-category">
-        <h3>Tools & Workflow</h3>
-        <ul>
-          <li>Git / GitHub</li>
-          <li>Xcode</li>
-          <li>VS Code</li>
-          <li>Blender <span class="skill-level">basic</span></li>
-          <li>adb / scrcpy</li>
-        </ul>
-      </div>
-
-      <div class="skill-category">
-        <h3>Specialties</h3>
-        <ul>
-          <li>Physics systems</li>
-          <li>Mobile UX / touch input</li>
-          <li>Procedural geometry</li>
-          <li>Build pipeline automation</li>
-          <li>Multiplayer fundamentals</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== About ===== -->
-  <section id="about" aria-labelledby="about-heading">
-    <h2 id="about-heading">About</h2>
-    <div class="about-grid">
-      <div class="about-text">
-        <p>I'm a game developer based in Kitchener-Waterloo, Ontario. Currently shipping a C++ multiplayer party game in Unreal Engine 5.6 and I've shipped a solo iOS game built with SceneKit. I write daily, ship small, and learn by doing.</p>
-        <p>My path here wasn't straight — started with mobile iOS dev, fell in love with physics systems and the feel of "juice" in games. A classmate once told me "you only know how to copy AI." That lit a fire. Now every commit is proof: I build, I break, I fix, I ship.</p>
-        <p>Looking for a junior gameplay or engine programmer role at an Ontario studio where I can own features, learn from seniors, and contribute to games people actually play.</p>
-      </div>
-      <aside class="about-aside">
-        <strong>Currently:</strong> Shipping UE 5.6 StumbleGuysClone — daily commits, public roadmap<br><br>
-        <strong>Looking for:</strong> Junior Gameplay / Engine / Tools Programmer roles in Ontario<br><br>
-        <strong>Open to:</strong> Co-op, Internship, Junior Full-time<br><br>
-        <strong>Target studios:</strong> Ubisoft Toronto, Rockstar Toronto, Certain Affinity, DrinkBox Studios, Torn Banner Studios, Capybara Games, Digital Extremes
-      </aside>
-    </div>
-  </section>
-
-  <!-- ===== Contact ===== -->
-  <section id="contact" aria-labelledby="contact-heading">
-    <h2 id="contact-heading">Contact</h2>
-    <p class="section-intro">Fastest way to reach me. Mention you saw the portfolio.</p>
-    <div class="contact-grid">
-      <a href="mailto:m4sternoob@gmail.com" class="contact-card">
-        <span class="contact-icon">📧</span>
-        <span class="contact-label">Email</span>
-        <span class="contact-value">m4sternoob@gmail.com</span>
-      </a>
-      <a href="https://linkedin.com/in/m4sternoob" target="_blank" rel="noopener" class="contact-card">
-        <span class="contact-icon">🔗</span>
-        <span class="contact-label">LinkedIn</span>
-        <span class="contact-value">/in/m4sternoob</span>
-      </a>
-      <a href="https://github.com/m4sternoob" target="_blank" rel="noopener" class="contact-card">
-        <span class="contact-icon">💻</span>
-        <span class="contact-label">GitHub</span>
-        <span class="contact-value">@m4sternoob</span>
-      </a>
-      <a href="resume.md" download class="contact-card">
-        <span class="contact-icon">📄</span>
-        <span class="contact-label">Resume</span>
-        <span class="contact-value">resume.md</span>
-      </a>
-    </div>
-  </section>
-
-  <!-- ===== Project Detail Modals ===== -->
-  <div id="stumble-lite-details" class="modal" role="dialog" aria-labelledby="stumble-lite-modal-title" aria-modal="true" hidden>
+  <!-- ===== Modals ===== -->
+  <div id="stumble-lite-modal" class="modal" role="dialog" aria-labelledby="stumble-lite-modal-title" aria-modal="true" hidden>
+    <div class="modal-overlay" tabindex="-1"></div>
     <div class="modal-content">
       <button class="modal-close" aria-label="Close details">&times;</button>
-      <h3 id="stumble-lite-modal-title">Stumble Lite — Technical Details</h3>
-      <div class="modal-grid">
-        <div>
+      <header class="modal-header">
+        <span class="modal-badge shipped">Shipped</span>
+        <h3 id="stumble-lite-modal-title">Stumble Lite — Technical Deep Dive</h3>
+      </header>
+      <div class="modal-body">
+        <div class="modal-section">
           <h4>Architecture</h4>
           <ul>
-            <li>Single <code>GameViewController</code> owns SCNView, scene, players, obstacles</li>
-            <li><code>SCNSceneRendererDelegate</code> drives 60 FPS update loop</li>
-            <li><code>SCNPhysicsContactDelegate</code> handles kill-zone elimination</li>
-            <li>No storyboards / SwiftUI — 100% programmatic UIKit</li>
-          </ul>
-          <h4>Systems</h4>
-          <ul>
-            <li><strong>Player3D:</strong> Capsule body + sphere head + eye nodes, physics body with custom bitmasks</li>
-            <li><strong>Obstacle3D:</strong> Kinematic bodies — spinning bars, moving platforms with sinusoidal motion</li>
-            <li><strong>JoystickView:</strong> Touch-drag virtual stick, outputs normalized <code>CGVector</code></li>
-            <li><strong>Physics.swift:</strong> Bitmask categories (player, wall, killZone), collision filtering</li>
+            <li>Single <code>GameViewController</code> owns <code>SCNView</code>, scene, players, obstacles</li>
+            <li><code>SCNSceneRendererDelegate</code> drives 60 FPS fixed-timestep update loop</li>
+            <li><code>SCNPhysicsContactDelegate</code> handles kill-zone elimination via bitmask filtering</li>
+            <li>100% programmatic UIKit — no storyboards, no SwiftUI, no xibs</li>
           </ul>
         </div>
-        <div>
+        <div class="modal-section">
+          <h4>Core Systems</h4>
+          <dl class="tech-dl">
+            <dt><code>Player3D</code></dt>
+            <dd>Capsule physics body + sphere head + eye nodes. Custom bitmask categories. Force-based movement with horizontal speed capping.</dd>
+            <dt><code>Obstacle3D</code></dt>
+            <dd>Kinematic bodies — spinning bars (angular velocity), moving platforms (sinusoidal position). Update in render delegate.</dd>
+            <dt><code>JoystickView</code></dt>
+            <dd>Touch-drag virtual stick, outputs normalized <code>CGVector</code>. Dead zone, magnitude clamping, screen-to-world transform.</dd>
+            <dt><code>Physics.swift</code></dt>
+            <dd>Bitmask categories (Player, Wall, KillZone), collision/contact test masks. Clean separation of concerns.</dd>
+          </dl>
+        </div>
+        <div class="modal-section">
           <h4>Build Pipeline</h4>
           <ul>
             <li><code>gen_pbxproj.py</code> generates <code>.xcodeproj</code> from source tree</li>
             <li>Post-gen fix: <code>truncate -s -2</code> + append <code>}</code> for valid pbxproj</li>
-            <li>Scheme: <code>StumbleLite.xcscheme</code> in shared schemes</li>
-            <li>Bundle ID: <code>com.example.StumbleLite</code></li>
-            <li>Deployment target: iOS 16.0 (iPhone X compatible)</li>
+            <li>Scheme: <code>StumbleLite.xcscheme</code> in shared schemes dir</li>
+            <li>Bundle ID: <code>com.example.StumbleLite</code> · Deployment: iOS 16.0 (iPhone X+)</li>
           </ul>
-          <h4>Polish (Planned)</h4>
+        </div>
+        <div class="modal-section">
+          <h4>Planned Polish</h4>
           <ul>
-            <li>Bot AI for non-local players</li>
-            <li>Multiple maps / arena variants</li>
-            <li>Squash/stretch on impact, screen shake, particles</li>
-            <li>Character variety (skins, trail effects)</li>
+            <li>Bot AI for non-local players (wander + avoidance)</li>
+            <li>Multiple arena variants / map rotation</li>
+            <li>Squash/stretch on impact, screen shake, particle bursts</li>
+            <li>Character variety — skins, trail effects, emotes</li>
           </ul>
         </div>
       </div>
     </div>
   </div>
 
-  <div id="stumbleguysclone-details" class="modal" role="dialog" aria-labelledby="stumbleguysclone-modal-title" aria-modal="true" hidden>
+  <div id="stumbleguysclone-modal" class="modal" role="dialog" aria-labelledby="stumbleguysclone-modal-title" aria-modal="true" hidden>
+    <div class="modal-overlay" tabindex="-1"></div>
     <div class="modal-content">
       <button class="modal-close" aria-label="Close details">&times;</button>
-      <h3 id="stumbleguysclone-modal-title">StumbleGuysClone — 30-Day Roadmap</h3>
-      <div class="modal-grid">
-        <div>
-          <h4>Week 1 — Foundations</h4>
-          <ul>
-            <li>Day 1: Project setup, repo, first commit ✓</li>
-            <li>Day 2: <code>AStumbleCharacter</code> — capsule + sphere, WASD + jump</li>
-            <li>Day 3: <code>AStumbleArena</code> — floor + 4 walls</li>
-            <li>Day 4: Top-down follow camera with smoothing</li>
-            <li>Day 5: <code>AObstacleMovingPlatform</code> — timed back/forth</li>
-            <li>Day 6: Physics materials — bouncy players, tuned friction</li>
-            <li>Day 7: Devlog #1 + deploy portfolio to GitHub Pages</li>
-          </ul>
-        </div>
-        <div>
-          <h4>Week 2 — Core Mechanics (Vertical Slice)</h4>
-          <ul>
-            <li>Day 8: <code>AObstacleSpinner</code> — rotating bar</li>
-            <li>Day 9: Kill zone + 3s respawn</li>
-            <li>Day 10: Round system — 60s timer, last-player-standing, win screen</li>
-            <li>Day 11: Lobby + 4 character slots + circle spawn</li>
-            <li>Day 12: Dumb bot AI wander</li>
-            <li>Day 13: Particles on hit + eliminated (juice pass)</li>
-            <li>Day 14: <strong>Vertical slice build</strong>, 1-min gameplay video</li>
-          </ul>
-        </div>
-        <div>
-          <h4>Week 3 — Multiplayer</h4>
-          <ul>
-            <li>Day 15: Replicate character movement (server→client)</li>
-            <li>Day 16: Server-authoritative physics</li>
-            <li>Day 17: Replicate obstacle positions</li>
-            <li>Day 18: Replicate win condition + timer</li>
-            <li>Day 19: LAN session browser (host/join UI)</li>
-            <li>Day 20: 2 humans + 2 bots playtest</li>
-            <li>Day 21: Devlog #3</li>
-          </ul>
-        </div>
-        <div>
-          <h4>Week 4 — Polish & Ship</h4>
-          <ul>
-            <li>Day 22: UI upgrade — fonts, colors, animations</li>
-            <li>Day 23: Sound pass — jump, hit, win, lose</li>
-            <li>Day 24: Settings menu (volume, keybinds)</li>
-            <li>Day 25: 60-sec trailer video</li>
-            <li>Day 26: Package Windows + macOS builds</li>
-            <li>Day 27: Final README + screenshots</li>
-            <li>Day 28: <strong>Release v1.0</strong> on GitHub</li>
-            <li>Day 29: Recruiter outreach blitz</li>
-            <li>Day 30: Final retro + next-phase decision</li>
-          </ul>
+      <header class="modal-header">
+        <span class="modal-badge progress">In Progress</span>
+        <h3 id="stumbleguysclone-modal-title">StumbleGuysClone — 30-Day Roadmap</h3>
+      </header>
+      <div class="modal-body">
+        <div class="roadmap-weeks">
+          <div class="roadmap-week">
+            <h4>Week 1 — Foundations</h4>
+            <ol>
+              <li class="done">Day 1: Project setup, repo, first commit</li>
+              <li class="done">Day 2: <code>AStumbleCharacter</code> — capsule + sphere, EnhancedInput movement + jump</li>
+              <li>Day 3: <code>AStumbleArena</code> — floor + 4 walls, kill zone</li>
+              <li>Day 4: Follow camera with smoothing, lag compensation</li>
+              <li>Day 5: <code>AObstacleMovingPlatform</code> — timed back/forth motion</li>
+              <li>Day 6: Physics materials — bouncy players, tuned friction, restitution</li>
+              <li>Day 7: Devlog #1 + deploy portfolio to GitHub Pages</li>
+            </ol>
+          </div>
+          <div class="roadmap-week">
+            <h4>Week 2 — Core Mechanics (Vertical Slice)</h4>
+            <ol>
+              <li>Day 8: <code>AObstacleSpinner</code> — rotating bar with collision impulse</li>
+              <li>Day 9: Kill zone + 3s respawn with invincibility frames</li>
+              <li>Day 10: Round system — 60s timer, last-player-standing, win screen</li>
+              <li>Day 11: Lobby + 4 character slots + circle spawn formation</li>
+              <li>Day 12: Dumb bot AI — wander + obstacle avoidance</li>
+              <li>Day 13: Juice pass — particles on hit/elim, screen shake, sound hooks</li>
+              <li class="milestone">Day 14: <strong>Vertical slice build</strong> — 1-min gameplay video</li>
+            </ol>
+          </div>
+          <div class="roadmap-week">
+            <h4>Week 3 — Multiplayer</h4>
+            <ol>
+              <li>Day 15: Replicate character movement (server→client)</li>
+              <li>Day 16: Server-authoritative physics, client prediction</li>
+              <li>Day 17: Replicate obstacle positions (deterministic simulation)</li>
+              <li>Day 18: Replicate win condition + timer + round state</li>
+              <li>Day 19: LAN session browser — host/join UI, Steam later</li>
+              <li>Day 20: 2 humans + 2 bots playtest, fix worst desyncs</li>
+              <li>Day 21: Devlog #3 — multiplayer milestone</li>
+            </ol>
+          </div>
+          <div class="roadmap-week">
+            <h4>Week 4 — Polish & Ship</h4>
+            <ol>
+              <li>Day 22: UI upgrade — fonts, colors, animations, gamepad support</li>
+              <li>Day 23: Sound pass — jump, hit, elim, win, lose, ambience</li>
+              <li>Day 24: Settings menu — volume, keybinds, graphics, accessibility</li>
+              <li>Day 25: 60-sec trailer video, upload to YouTube</li>
+              <li>Day 26: Package Windows + macOS builds, GitHub Releases</li>
+              <li>Day 27: Final README + screenshots + how-to-play</li>
+              <li class="milestone">Day 28: <strong>Release v1.0</strong> on GitHub</li>
+              <li>Day 29: Recruiter outreach blitz + community playtest</li>
+              <li>Day 30: Final retro + next-phase decision</li>
+            </ol>
+          </div>
         </div>
       </div>
     </div>
   </div>
 
-  <div id="phone-mirror-details" class="modal" role="dialog" aria-labelledby="phone-mirror-modal-title" aria-modal="true" hidden>
+  <div id="phone-mirror-modal" class="modal" role="dialog" aria-labelledby="phone-mirror-modal-title" aria-modal="true" hidden>
+    <div class="modal-overlay" tabindex="-1"></div>
     <div class="modal-content">
       <button class="modal-close" aria-label="Close details">&times;</button>
-      <h3 id="phone-mirror-modal-title">Phone Mirror + Agent Pipeline</h3>
-      <div class="modal-grid single">
-        <div>
+      <header class="modal-header">
+        <span class="modal-badge shipped">Shipped</span>
+        <h3 id="phone-mirror-modal-title">Phone Mirror + Agent Pipeline</h3>
+      </header>
+      <div class="modal-body">
+        <div class="modal-section">
           <h4>Problem</h4>
-          <p>Wireless <code>adb</code> debug port on Pixel changes randomly. Every scrcpy session required manual <code>adb connect IP:NEW_PORT</code> — friction multiplier.</p>
+          <p>Wireless <code>adb</code> debug port on Pixel changes randomly. Every <code>scrcpy</code> session required manual <code>adb connect IP:NEW_PORT</code> — a friction multiplier that broke flow.</p>
+        </div>
+        <div class="modal-section">
           <h4>Solution</h4>
           <ul>
-            <li>Local OpenClaw agent monitors <code>adb devices</code> output</li>
-            <li>On port change, auto-runs <code>adb connect IP:NEW_PORT</code></li>
-            <li>AppleScript bridge triggers scrcpy relaunch</li>
-            <li>Zero manual steps — phone mirrors instantly</li>
+            <li>Local OpenClaw agent monitors <code>adb devices</code> output on interval</li>
+            <li>On port change detection, auto-runs <code>adb connect IP:NEW_PORT</code></li>
+            <li>AppleScript bridge triggers <code>scrcpy</code> relaunch with new connection</li>
+            <li>Zero manual steps — phone mirrors instantly, every time</li>
           </ul>
+        </div>
+        <div class="modal-section">
           <h4>Stack</h4>
-          <ul>
-            <li>scrcpy (Genymobile)</li>
-            <li>adb (platform-tools)</li>
-            <li>OpenClaw agent (local, MiniMax Portal)</li>
-            <li>AppleScript for macOS integration</li>
-          </ul>
+          <dl class="tech-dl">
+            <dt>scrcpy</dt><dd>Genymobile — high-performance screen mirroring</dd>
+            <dt>adb</dt><dd>Android platform-tools — device communication</dd>
+            <dt>OpenClaw</dt><dd>Local agent (MiniMax Portal) — monitoring + orchestration</dd>
+            <dt>AppleScript</dt><dd>macOS integration — app launch/focus automation</dd>
+          </dl>
+        </div>
+        <div class="modal-section">
+          <h4>Impact</h4>
+          <p>Eliminated a recurring friction step from every phone-screen session. Compound time savings across development, testing, and demo workflows.</p>
         </div>
       </div>
     </div>
   </div>
-
-  <!-- ===== Footer ===== -->
-  <footer role="contentinfo">
-    <p>Built with vanilla HTML/CSS/JS — no framework bloat. Last updated September 2026.</p>
-    <p style="margin-top: 0.5rem; font-size: 0.75rem; color: var(--text-dim);">© 2026 M4sterNoob. Free to study, fork, and learn from.</p>
-  </footer>
 
   <script src="script.js"></script>
 </body>
